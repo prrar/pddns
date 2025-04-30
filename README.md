@@ -1,7 +1,7 @@
 # pddns.go: Updates DNS entries on Cloudflare
 
 Usage:
-````shell
+```shell
 pddns --config config.json --dns-entry subdomain.domain.com
 ```
 
