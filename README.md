@@ -4,7 +4,7 @@
 ```shell
 pddns --config config.json --dns-entry subdomain.domain.com --ip 123.456.789.012
 ```
-If no IP is specified, the new IP is set to current external IP.
+If no IP is specified, it's set to current external IP.
 
 ## Cloudflare Setup
 
