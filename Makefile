@@ -9,7 +9,8 @@ TARGETS := \
 	freebsd/amd64 \
 	darwin/amd64 \
 	linux/amd64 \
-	linux/arm64
+	linux/arm64 \
+	windows/amd64
 
 # Default target
 all: $(TARGETS)
@@ -18,8 +19,10 @@ all: $(TARGETS)
 $(TARGETS):
 	@echo "Building for $@"
 	@mkdir -p $(BUILD_DIR)
-	@GOOS=$(word 1, $(subst /, ,$@)) GOARCH=$(word 2, $(subst /, ,$@)) \
-	go build -o $(BUILD_DIR)/$(APP_NAME)-$(word 1, $(subst /, ,$@))-$(word 2, $(subst /, ,$@)) $(SRC)
+	@OS=$(word 1, $(subst /, ,$@)); \
+	ARCH=$(word 2, $(subst /, ,$@)); \
+	EXT=$$( [ "$$OS" = "windows" ] && echo ".exe" || echo "" ); \
+	GOOS=$$OS GOARCH=$$ARCH go build -o $(BUILD_DIR)/$(APP_NAME)-$$OS-$$ARCH$$EXT $(SRC)
 
 # Clean up build artifacts
 clean:
