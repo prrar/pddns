@@ -2,8 +2,9 @@
 
 ## Usage:
 ```shell
-pddns --config config.json --dns-entry subdomain.domain.com
+pddns --config config.json --dns-entry subdomain.domain.com --ip 123.456.789.012
 ```
+If no IP is specified, the new IP is set to current external IP.
 
 ## Cloudflare Setup
 
@@ -33,7 +34,6 @@ Before using this tool, you need to get the following information from your Clou
    ```json
    {
      "zone_id": "your-zone-id",
-     "email": "your-cloudflare-email@example.com",
      "api_token": "your-api-token"
    }
    ```
