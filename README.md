@@ -40,11 +40,13 @@ Before using this tool, you need to get the following information from your Clou
 
 ## Prebuilt binaries ready to go:
 
-| OS         | Arch   | Download |
-|------------|--------|----------|
-| FreeBSD    | amd64  | [pddns-freebsd-amd64](https://github.com/prrar/pddns/releases/download/vX.Y.Z/pddns-freebsd-amd64) |
-| macOS (Intel)      | amd64  | [pddns-darwin-amd64](https://github.com/prrar/pddns/releases/download/vX.Y.Z/pddns-darwin-amd64) |
-| macOS (M chips)     | arm64  | [pddns-darwin-arm64](https://github.com/prrar/pddns/releases/download/vX.Y.Z/pddns-darwin-arm64) |
-| Linux      | amd64  | [pddns-linux-amd64](https://github.com/prrar/pddns/releases/download/vX.Y.Z/pddns-linux-amd64) |
-| Raspberry Pi (3B/4/5)      | arm64  | [pddns-linux-arm64](https://github.com/prrar/pddns/releases/download/vX.Y.Z/pddns-linux-arm64) |
-| Windows    | amd64  | [pddns-windows-amd64.exe](https://github.com/prrar/pddns/releases/download/vX.Y.Z/pddns-windows-amd64.exe) |
+After running the `make` command, you will find the following compiled binaries in the `build` directory:
+
+| Platform              | Binary Path                         | Notes                                      |
+|-----------------------|-------------------------------------|--------------------------------------------|
+| **macOS (Intel)**      | [build/pddns-macos-amd64](./build/pddns-macos-amd64) | Make executable with `chmod +x`            |
+| **macOS (M chips)**      | [build/pddns-macos-arm64](./build/pddns-macos-arm64) | Make executable with `chmod +x`            |
+| **Linux**      | [build/pddns-linux-amd64](./build/pddns-linux-amd64) | Make executable with `chmod +x`            |
+| **Raspberry Pi (3B/4/5)**      | [build/pddns-linux-arm64](./build/pddns-linux-arm64) | Make executable with `chmod +x`            |
+| **FreeBSD**    | [build/pddns-freebsd-amd64](./build/pddns-freebsd-amd64) | Make executable with `chmod +x`            |
+| **Windows**    | [build/pddns-windows-amd64.exe](./build/pddns-windows-amd64.exe) | Run as `.exe` file directly                |
