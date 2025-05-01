@@ -8,6 +8,7 @@ BUILD_DIR := build
 TARGETS := \
 	freebsd/amd64 \
 	darwin/amd64 \
+	darwin/arm64 \
 	linux/amd64 \
 	linux/arm64 \
 	windows/amd64
