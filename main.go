@@ -232,7 +232,11 @@ func main() {
 	}
 
 	if newIP == targetRecord.IP {
-		log.Println("IP address has not changed.")
+		// Changed from log to fmt so it doesn't generate an email output
+		// when using it with cron.
+		// cron will still send email if there's an error or the IP is changed.
+		//log.Println("IP address has not changed.")
+		fmt.Println("IP address has not changed.")
 		return
 	}
 
