@@ -1,10 +1,25 @@
 # pddns.go: Updates DNS entries on Cloudflare
 
-## Usage:
+---
+
+## Usage
 ```shell
 pddns --config config.json --dns-entry subdomain.domain.com --ip 123.456.789.012
 ```
 If no IP is specified, it's set to current external IP.
+
+---
+
+## Compiling
+```shell
+make
+```
+Or:
+```shell
+go build -o pddns .
+```
+
+---
 
 ## Cloudflare Setup
 
@@ -38,15 +53,4 @@ Before using this tool, you need to get the following information from your Clou
    }
    ```
 
-## Prebuilt binaries ready to go:
-
-After running the `make` command, you will find the following compiled binaries in the `build` directory:
-
-| Platform              | Binary Path                         | Notes                                      |
-|-----------------------|-------------------------------------|--------------------------------------------|
-| **macOS (Intel)**      | [build/pddns-macos-amd64](./build/pddns-macos-amd64) | Make executable with `chmod +x`            |
-| **macOS (M chips)**      | [build/pddns-macos-arm64](./build/pddns-macos-arm64) | Make executable with `chmod +x`            |
-| **Linux**      | [build/pddns-linux-amd64](./build/pddns-linux-amd64) | Make executable with `chmod +x`            |
-| **Raspberry Pi (3B/4/5)**      | [build/pddns-linux-arm64](./build/pddns-linux-arm64) | Make executable with `chmod +x`            |
-| **FreeBSD**    | [build/pddns-freebsd-amd64](./build/pddns-freebsd-amd64) | Make executable with `chmod +x`            |
-| **Windows**    | [build/pddns-windows-amd64.exe](./build/pddns-windows-amd64.exe) | Run as `.exe` file directly                |
+---
